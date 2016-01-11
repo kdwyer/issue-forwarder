@@ -1,4 +1,4 @@
-= Issue Forwarder
+# Issue Forwarder
 
 A Google App Engine mini-app that receives e-mails and creates Github issues
 from them.
