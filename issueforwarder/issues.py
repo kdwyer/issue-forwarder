@@ -46,8 +46,8 @@ def extract_issue_body(message):
 def create_payload(title, body):
     """Create payload mapping for the github api request."""
     return {
-            'title': title,
-            'body': body
+        'title': title,
+        'body': body
     }
 
 
@@ -59,10 +59,10 @@ def create_url(config):
 def create_headers(config):
     """Create headers for github api request."""
     return {
-            'Accept': 'application/vnd.github.v3+json',
-            'Authorization': 'token {}'.format(config['auth_token']),
-            'Content-Type': 'application/json',
-            'User-Agent': config['user_agent_string']
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': 'token {}'.format(config['auth_token']),
+        'Content-Type': 'application/json',
+        'User-Agent': config['user_agent_string']
     }
 
 
@@ -70,6 +70,6 @@ def log_result(result):
     if 200 <= result.status_code <= 299:
         logging.info('Issue created succesfully: %s', json.loads(result.content))
     else:
-        logging.error('Unxpected status code: %d.', result.status_code)
+        logging.error('Unexpected status code: %d.', result.status_code)
         logging.error('Response: %s', json.loads(result.content))
     return
