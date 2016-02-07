@@ -12,7 +12,7 @@ from them.
   values
   - `base_url`: https://api.github.com
   - `repo_name`: the name of the repo in which to create issues
-  - `repo_owner`: the github user who will create the tickets
+  - `repo_owner`: the github user or organisation that owns the repository
   - `auth_token`: a [personal access
 token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for the repo_owner.
     - The token's scope should be public_repo for public repositories or repo for private repositories.
